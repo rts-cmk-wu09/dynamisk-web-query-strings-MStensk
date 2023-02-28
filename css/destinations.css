@@ -1,0 +1,31 @@
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+ img {
+    max-width: 288px;
+    min-height: 220px;
+    max-height: 220px;
+ }
+ .dest__box{
+    background-color: #CEF9FF;
+    height: 6em;
+    position: relative;
+    bottom: 2em;
+
+ }
+ .dest__box h2{
+    margin: 0 auto;
+ }
+ .destinations {
+    padding-top: 10%;
+    max-width: 288px;
+    max-height: 320px;
+ }
+ main {
+    display: grid; 
+    grid-template-columns: repeat(4,minmax(100px, 1fr));
+    align-items: start;
+    justify-items: center;
+ }
