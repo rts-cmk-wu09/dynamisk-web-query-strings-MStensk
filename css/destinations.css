@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
 body{
     margin: 0 auto;
     box-sizing: border-box;
@@ -10,22 +13,44 @@ body{
  }
  .dest__box{
     background-color: #CEF9FF;
-    height: 6em;
+    height: 4em;
     position: relative;
     bottom: 2em;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
  }
- .dest__box h2{
-    margin: 0 auto;
+ span{
+   justify-self: start;
+   padding-left: 5%;
+   bottom: 1.4em;
+   position: relative;
+   
+ }
+ .box__more{
+   padding: 16% 5% 0;
+    justify-self: end;
+    align-self: center;
+    grid-column: 2/3;
+    font-family: 'Inter', sans-serif;
+ }
+ .box__more a{
+   text-decoration: none;
+   color: #000;
  }
  .destinations {
-    padding-top: 10%;
+    padding-top: 1%;
     max-width: 288px;
     max-height: 320px;
  }
- main {
+ .container {
     display: grid; 
     grid-template-columns: repeat(4,minmax(100px, 1fr));
     align-items: start;
     justify-items: center;
+ }
+h1 {
+   font-family: 'Inter', sans-serif; 
+   font-size: 2em;
+   padding-left: 5%;
  }

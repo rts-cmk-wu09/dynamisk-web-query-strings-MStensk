@@ -1,26 +1,11 @@
 const content = document.querySelector("main");
 const docFrag = document.createDocumentFragment();
-/*
-fetch('./data/destinations.json')
-.then (res => res.json())
-.then(data => {
-
-     let array = Object.values(data);
-     let dests = array;
-     array.map(function(destinations) {
-        let li = document.createElement('div');
-        let name = document.createElement('h2');
-        let email = document.createElement('span');
-        email.innerHTML = `${destinations[0].title}`;
-        name.innerHTML = `${destinations[0].destination}`
-        li.appendChild(name);
-        li.appendChild(email);
-        docFrag.appendChild(li);
-        console.log(destinations);
-     });
-    
-     content.appendChild(docFrag);
-});*/
+const heading = document.createElement("h1");
+const body = document.querySelector("body");
+const container = document.createElement("div");
+container.setAttribute("class", "container")
+content.append(heading);
+content.append(container);
 
 fetch('./data/destinations.json')
 .then ((res) =>{
@@ -34,18 +19,23 @@ fetch('./data/destinations.json')
         card.setAttribute("class", "destinations");
         let div = document.createElement("div");
         div.setAttribute("class", "dest__box")
-
+        let text = document.createElement("div");
+        text.setAttribute("class", "box__more")
+        let like = document.createElement("span");
         let picture = document.createElement("img");
         let title = document.createElement("h2");
         
+
+        heading.innerHTML = "Apartments for rent"
         picture.src = "img/" + ele.image;
         title.textContent = ele.title;
-        
+        text.innerHTML = `<a href ="/destination.html?=id${ele.id}">More</a>`
+        like.innerHTML = `<i class="fa-regular fa-heart"></i>`
+        div.append(text);
+        div.append(like);
         card.append(picture);
-        div.append(title);
         card.append(div);
-        content.append(card);
-
+        container.append(card);
 
     });
 });
