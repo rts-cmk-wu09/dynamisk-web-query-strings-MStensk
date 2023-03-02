@@ -1,5 +1,4 @@
 const content = document.querySelector("main");
-const docFrag = document.createDocumentFragment();
 const heading = document.createElement("h1");
 const body = document.querySelector("body");
 const container = document.createElement("div");
@@ -29,7 +28,7 @@ fetch('./data/destinations.json')
         heading.innerHTML = "Apartments for rent"
         picture.src = "img/" + ele.image;
         title.textContent = ele.title;
-        text.innerHTML = `<a href ="/destination.html?=id${ele.id}">More</a>`
+        text.innerHTML = `<a class="more" href ="/destination.html?id=${ele.id}">More</a>`
         like.innerHTML = `<i class="fa-regular fa-heart"></i>`
         div.append(text);
         div.append(like);
