@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
+body{
+    margin: 0 auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+ img {
+    max-width: 288px;
+    min-height: 220px;
+    max-height: 220px;
+ }
+ .dest__box{
+    background-color: #CEF9FF;
+    height: 4em;
+    position: relative;
+    bottom: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+ }
+ span{
+   justify-self: start;
+   padding-left: 5%;
+   bottom: 1.4em;
+   position: relative;
+   
+ }
+ .box__more{
+   padding: 15% 5% 0;
+    justify-self: end;
+    align-self: center;
+    grid-column: 2/3;
+    font-family: 'Inter', sans-serif;
+ }
+ .box__more a{
+   text-decoration: none;
+   color: #000;
+ }
+ .destinations {
+    padding-top: 1%;
+    max-width: 288px;
+    max-height: 320px;
+ }
+ .more:hover{
+   font-weight: 700;
+ }
+ .container {
+    display: grid; 
+    grid-template-columns: repeat(4,minmax(100px, 1fr));
+    align-items: start;
+    justify-items: center;
+ }
+h1 {
+   font-family: 'Inter', sans-serif; 
+   font-size: 2em;
+   padding-left: 5%;
+ }
+ .fa-regular:hover{
+   cursor: pointer;
+}
+.fa-solid{
+   color: red;
+}
