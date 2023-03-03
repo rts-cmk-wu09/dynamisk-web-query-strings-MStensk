@@ -14,8 +14,8 @@ fetch('./data/destinations.json')
 
 
     data.destinations.forEach( ele => {
-        let card = document.createElement("article");
-        card.setAttribute("class", "destinations");
+        let card = document.createElement("figure");
+        card.setAttribute("id", `${ele.id}`);
         let div = document.createElement("div");
         div.setAttribute("class", "dest__box")
         let text = document.createElement("div");
@@ -23,13 +23,12 @@ fetch('./data/destinations.json')
         let like = document.createElement("span");
         let picture = document.createElement("img");
         let title = document.createElement("h2");
-        
 
         heading.innerHTML = "Apartments for rent"
         picture.src = "img/" + ele.image;
         title.textContent = ele.title;
         text.innerHTML = `<a class="more" href ="/destination.html?id=${ele.id}">More</a>`
-        like.innerHTML = `<i class="fa-regular fa-heart"></i>`
+        like.innerHTML = `<i class="${localStorage.getItem(ele.id) ? "fa-solid fa-heart" :"fa-regular fa-heart" }"></i>`
         div.append(text);
         div.append(like);
         card.append(picture);
